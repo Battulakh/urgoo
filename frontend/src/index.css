@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -9,22 +11,20 @@ body {
   background-color: #171515;
   margin: 0;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-family: Roboto Regular, sans-serif !important;
 }
 main {
-  padding: 1rem;
+  flex: 1;
 }
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: absolute;
 }
 .top-menu {
   width: 70%;
-  /* position: absolute; */
   top: 0;
   height: 70px;
   background: rgb(29, 28, 28);
@@ -38,6 +38,9 @@ main {
   justify-content: space-evenly;
   align-items: center;
 }
+.top-menu-logo {
+  filter: brightness(0) invert(1);
+}
 .top-menu-items {
   display: flex;
   list-style: none;
@@ -49,8 +52,84 @@ main {
   color: #fff;
   text-decoration: none;
 }
-h1 {
-  color: white;
+.welcome-container {
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.welcome-background {
+  width: 65%;
+  height: 100%;
+  background-image: url("../public/image/bg.png");
+  height: 500px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: self-end;
+  justify-content: center;
+}
+.welcome-title {
+  margin-bottom: 30px;
+}
+.welcome-title-hgroup {
+  color: #fff;
+  font-family: "Comfortaa";
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 4px 1px 3px rgba(0, 0, 0, 0.51);
+  line-height: 100px;
+}
+.order-btn {
+  margin-bottom: 20px;
+  /* position: relative; */
+  background-color: #20344b;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  touch-action: manipulation;
+  margin-left: 41%;
+}
+
+/* .order-btn:after {
+  content: "";
+  background: #262020;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+} */
+
+/* .order-btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+} */
+.movie_state {
+  font-family: "Comfortaa";
+  color: #fff;
+  font-size: 25px;
+  margin-left: 16%;
+}
+.Movie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .movies {
   display: flex;
@@ -67,4 +146,49 @@ h1 {
   box-sizing: border-box;
   filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 9px;
+}
+.movie-line {
+  margin-bottom: 50px;
+  margin-top: 50px;
+  border-top: 3px solid #bbb;
+  width: 100%;
+}
+
+.footer-container {
+  background-color: #323131;
+  margin-top: 50px;
+  width: 100%;
+  bottom: 0;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer-nav > h3 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+}
+.footer-ul {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 10px;
+}
+.footer-ul > a {
+  text-decoration: none;
+}
+.footer-ul > a > li {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 13px;
+}
+hr.solid {
+  border-top: 1px solid #837d7d;
+  border-radius: 5px;
+}
+/* productscreen */
+.details {
+  display: flex 1, 1 30;
+  position: absolute;
 }
